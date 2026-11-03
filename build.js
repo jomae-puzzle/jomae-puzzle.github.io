@@ -27,6 +27,7 @@ ${canon?`<link rel="canonical" href="${esc(canon)}"><meta property="og:url" cont
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:type" content="website">
 ${CFG.siteUrl?`<meta property="og:image" content="${esc(CFG.siteUrl.replace(/\/$/,''))}/og.png">`:''}<meta name="twitter:card" content="summary_large_image">
 ${noindex?'<meta name="robots" content="noindex">':''}
+${CFG.googleVerification?`<meta name="google-site-verification" content="${esc(CFG.googleVerification)}">`:''}
 <meta name="theme-color" content="#12133a"><link rel="manifest" href="${asset(dir,'manifest.webmanifest')}">
 <link rel="icon" href="${asset(dir,'icons/icon-192.png')}"><link rel="apple-touch-icon" href="${asset(dir,'icons/apple-touch-icon.png')}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
